@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.API", "SocialMedia.API\SocialMedia.API.csproj", "{98DDD2EF-111A-4017-BFB8-61363138B342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMedia.API", "SocialMedia.API\SocialMedia.API.csproj", "{98DDD2EF-111A-4017-BFB8-61363138B342}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Core", "SocialMedia.Core\SocialMedia.Core.csproj", "{C842EA1F-6758-403C-B624-B20D2896E51A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMedia.Core", "SocialMedia.Core\SocialMedia.Core.csproj", "{C842EA1F-6758-403C-B624-B20D2896E51A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Infra", "SocialMedia.Infra\SocialMedia.Infra.csproj", "{05F5D56E-B21C-4AD1-ACBF-4F3464E27F31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMedia.Infra", "SocialMedia.Infra\SocialMedia.Infra.csproj", "{05F5D56E-B21C-4AD1-ACBF-4F3464E27F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.App", "SocialMedia.App\SocialMedia.App.csproj", "{F97B290D-7147-4DD1-B872-021163FBCC97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMedia.App", "SocialMedia.App\SocialMedia.App.csproj", "{F97B290D-7147-4DD1-B872-021163FBCC97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMedia.Tests", "SocialMedia.Tests\SocialMedia.Tests.csproj", "{3B9D91EE-FB5B-4CB5-BD18-0A041C6D843C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F97B290D-7147-4DD1-B872-021163FBCC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F97B290D-7147-4DD1-B872-021163FBCC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F97B290D-7147-4DD1-B872-021163FBCC97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9D91EE-FB5B-4CB5-BD18-0A041C6D843C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9D91EE-FB5B-4CB5-BD18-0A041C6D843C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9D91EE-FB5B-4CB5-BD18-0A041C6D843C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9D91EE-FB5B-4CB5-BD18-0A041C6D843C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

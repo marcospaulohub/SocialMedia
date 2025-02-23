@@ -39,9 +39,11 @@ O projeto utiliza as seguintes tecnologias e padrões:
 
 O projeto está separado em três MVP´s
 
-|  MVP  | Funcionalidades                      |
+|  MVP  | Funcionalidades               |
 |------| -----------------------------  | 
-|  ❌ | Contas, Perfis, Publicações    |
+|  ✅ | Contas                         |
+|  ❌ | Perfis                         |
+|  ❌ | Publicações                    |
 |  ❌ | Conexões, Feed                 |
 |  ❌ | Mensagens, Grupos, Notificação | 
 

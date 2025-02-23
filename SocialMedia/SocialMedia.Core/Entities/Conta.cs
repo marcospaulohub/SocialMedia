@@ -28,11 +28,14 @@ namespace SocialMedia.Core.Entities
             if(nomeCompleto != default)
                 NomeCompleto = nomeCompleto;
 
+            SetAsUpdated();
         }
 
         public void MudarSenha(string novaSenha)
         {
             Senha = novaSenha;
+
+            SetAsUpdated();
         }
     }
 }

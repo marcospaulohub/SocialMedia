@@ -20,10 +20,14 @@ namespace SocialMedia.Core.Entities
         public string Telefone { get; private set; }
         public DateTime DataNascimento { get; private set; }
 
-        public void Update(string nomeCompleto, DateTime dataNascimento)
+        public void Update(string? nomeCompleto, DateTime dataNascimento)
         {
-            NomeCompleto = nomeCompleto;
-            DataNascimento = dataNascimento;
+            if(dataNascimento != default)
+                DataNascimento = dataNascimento;
+
+            if(nomeCompleto != default)
+                NomeCompleto = nomeCompleto;
+
         }
 
         public void MudarSenha(string novaSenha)

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SocialMedia.App;
 using SocialMedia.Infra;
 
 namespace SocialMedia.API
@@ -14,6 +15,7 @@ namespace SocialMedia.API
 
             // Add services to the container.
             builder.Services
+                .AddApplication() 
                 .AddInfra(builder.Configuration);
 
             builder.Services.AddControllers();

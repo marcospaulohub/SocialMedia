@@ -25,7 +25,7 @@ namespace SocialMedia.Tests.Core
             Assert.Equal(email, conta.Email);
             Assert.Equal(telefone, conta.Telefone);
             Assert.Equal(dataNascimento, conta.DataNascimento);
-            Assert.True(conta.CreatedAt.Date == DateTime.Now.Date);
+            Assert.True(DateTime.Now.Date == conta.CreatedAt.Date);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace SocialMedia.Tests.Core
             // Assert
             Assert.Equal(novoNomeCompleto, conta.NomeCompleto);
             Assert.Equal(novoDataNascimento, conta.DataNascimento);
-            Assert.True(conta.UpdatedAt.GetValueOrDefault().Date == DateTime.Now.Date);
+            Assert.True(DateTime.Now.Date == conta.UpdatedAt.GetValueOrDefault().Date);
 
         }
 
@@ -70,7 +70,7 @@ namespace SocialMedia.Tests.Core
 
             // Assert
             Assert.Equal(novaSenha, conta.Senha);
-            Assert.True(conta.UpdatedAt.GetValueOrDefault().Date == DateTime.Now.Date);
+            Assert.True(DateTime.Now.Date == conta.UpdatedAt.GetValueOrDefault().Date);
         }
 
         [Fact]
@@ -88,7 +88,7 @@ namespace SocialMedia.Tests.Core
             conta.SetAsDeleted();
 
             // Assert
-            Assert.True(conta.DeletedAt.GetValueOrDefault().Date == DateTime.Now.Date);
+            Assert.True(DateTime.Now.Date == conta.DeletedAt.GetValueOrDefault().Date);
         }
     }
 }

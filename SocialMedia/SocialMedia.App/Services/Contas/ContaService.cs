@@ -25,9 +25,9 @@ namespace SocialMedia.App.Services.Contas
                 model.DataNascimento
                 );
 
-            _contaRepository.Insert(conta);
+            var contaId =  _contaRepository.Insert(conta);
 
-            return ResultViewModel<int>.Success(conta.Id);
+            return ResultViewModel<int>.Success(contaId);
         }
         public ResultViewModel Update(int id, UpdateContaInputModel model)
         {

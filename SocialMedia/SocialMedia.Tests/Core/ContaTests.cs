@@ -1,5 +1,6 @@
 ﻿using System;
 using SocialMedia.Core.Entities;
+using SocialMedia.Tests.Fakes.Contas;
 
 namespace SocialMedia.Tests.Core
 {
@@ -32,12 +33,8 @@ namespace SocialMedia.Tests.Core
         public void UpdateComDadosOk_Sucesso()
         {
             // Arrange
-            var nomeCompleto = "Nome Completo";
-            var senha = "senha";
-            var email = "email@email.com";
-            var telefone = "8888888888";
-            var dataNascimento = DateTime.Now.AddYears(-18);
-            var conta = new Conta(nomeCompleto, senha, email, telefone, dataNascimento);
+            var conta = new ContaFake().Generate();
+
             var novoNomeCompleto = "Novo Nome Completo";
             var novoDataNascimento = DateTime.Now.AddYears(-20);
 
@@ -56,12 +53,7 @@ namespace SocialMedia.Tests.Core
         public void MudarSenhaComDadosOk_Sucesso()
         {
             // Arrange
-            var nomeCompleto = "Nome Completo";
-            var senha = "senha";
-            var email = "email@email.com";
-            var telefone = "8888888888";
-            var dataNascimento = DateTime.Now.AddYears(-18);
-            var conta = new Conta(nomeCompleto, senha, email, telefone, dataNascimento);
+            var conta = new ContaFake().Generate();
             var novaSenha = "novaSenha";
 
             // Act
@@ -77,12 +69,7 @@ namespace SocialMedia.Tests.Core
         public void DeleteContaOk_Sucesso()
         {
             // Arrange
-            var nomeCompleto = "Nome Completo";
-            var senha = "senha";
-            var email = "email@email.com";
-            var telefone = "8888888888";
-            var dataNascimento = DateTime.Now.AddYears(-18);
-            var conta = new Conta(nomeCompleto, senha, email, telefone, dataNascimento);
+            var conta = new ContaFake().Generate();
 
             // Act
             conta.SetAsDeleted();

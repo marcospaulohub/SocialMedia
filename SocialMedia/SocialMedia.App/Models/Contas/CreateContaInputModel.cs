@@ -4,10 +4,19 @@ namespace SocialMedia.App.Models.Contas
 {
     public class CreateContaInputModel
     {
-        public required string NomeCompleto { get; set; }
-        public required string Senha { get; set; }
-        public required string Email { get; set; }
-        public required string Telefone { get; set; }
-        public required DateTime DataNascimento { get; set; }
+        public CreateContaInputModel(string nomeCompleto, string senha, string email, string telefone, DateTime dataNascimento)
+        {
+            NomeCompleto = nomeCompleto;
+            Senha = senha;
+            Email = email;
+            Telefone = telefone;
+            DataNascimento = dataNascimento;
+        }
+
+        public  string NomeCompleto { get; set; }
+        public  string Senha { get; set; }
+        public  string Email { get; set; }
+        public  string Telefone { get; set; }
+        public  DateTime DataNascimento { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using SocialMedia.App.Services.Contas;
 using SocialMedia.Core.Entities;
 using SocialMedia.Core.Messages.ContaMessages;
 using SocialMedia.Core.Repositories;
-using SocialMedia.Tests.Fakes.Contas;
+using SocialMedia.Tests.Fakes;
 
 namespace SocialMedia.Tests.App
 {
@@ -13,7 +13,7 @@ namespace SocialMedia.Tests.App
         public void Insert_ContaIsOk_Success()
         {
             // Arrange
-            var createContaInputModel = new CreateContaInputModelFake().Generate();
+            var createContaInputModel = FakeDataHelper.CreateContaInputModelFaker();
 
             var repository = Substitute.For<IContaRepository>();
 
@@ -41,8 +41,8 @@ namespace SocialMedia.Tests.App
         public void Update_ContaIsOk_Success()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
-            var updateContaInputModel = new UpdateContaInputModelFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
+            var updateContaInputModel = FakeDataHelper.UpdateContaInputModelFaker();
 
             var repository = Substitute.For<IContaRepository>();
 
@@ -66,7 +66,7 @@ namespace SocialMedia.Tests.App
         public void GetById_Exists_Success()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
             var repository = Substitute.For<IContaRepository>();
 
             repository
@@ -89,7 +89,7 @@ namespace SocialMedia.Tests.App
         public void GetByEmail_Exists_Success()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
             var repository = Substitute.For<IContaRepository>();
 
             repository
@@ -112,7 +112,7 @@ namespace SocialMedia.Tests.App
         public void Login_Ok_Success()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
             var repository = Substitute.For<IContaRepository>();
 
             repository
@@ -133,7 +133,7 @@ namespace SocialMedia.Tests.App
         public void Login_Senha_Error()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
             var repository = Substitute.For<IContaRepository>();
 
             repository
@@ -153,7 +153,7 @@ namespace SocialMedia.Tests.App
         public void Login_Email_Error()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
             var repository = Substitute.For<IContaRepository>();
 
             repository

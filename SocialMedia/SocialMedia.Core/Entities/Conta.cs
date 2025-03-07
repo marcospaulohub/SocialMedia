@@ -4,6 +4,7 @@ namespace SocialMedia.Core.Entities
 {
     public class Conta : BaseEntity
     {
+        public Conta() { }
         public Conta(string nomeCompleto, string senha, string email, string telefone, DateTime dataNascimento)
             : base()
         {

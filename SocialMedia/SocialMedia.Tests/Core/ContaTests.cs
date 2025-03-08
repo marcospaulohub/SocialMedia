@@ -1,6 +1,6 @@
 ﻿using System;
 using SocialMedia.Core.Entities;
-using SocialMedia.Tests.Fakes.Contas;
+using SocialMedia.Tests.Fakes;
 
 namespace SocialMedia.Tests.Core
 {
@@ -33,7 +33,7 @@ namespace SocialMedia.Tests.Core
         public void UpdateComDadosOk_Sucesso()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
 
             var novoNomeCompleto = "Novo Nome Completo";
             var novoDataNascimento = DateTime.Now.AddYears(-20);
@@ -53,7 +53,7 @@ namespace SocialMedia.Tests.Core
         public void MudarSenhaComDadosOk_Sucesso()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
             var novaSenha = "novaSenha";
 
             // Act
@@ -69,7 +69,7 @@ namespace SocialMedia.Tests.Core
         public void DeleteContaOk_Sucesso()
         {
             // Arrange
-            var conta = new ContaFake().Generate();
+            var conta = FakeDataHelper.CreateFakerConta();
 
             // Act
             conta.SetAsDeleted();

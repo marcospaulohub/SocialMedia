@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SocialMedia.Core.Entities
 {
@@ -13,6 +14,8 @@ namespace SocialMedia.Core.Entities
             Email = email;
             Telefone = telefone;
             DataNascimento = dataNascimento;
+
+            Perfis = [];
         }
 
         public string NomeCompleto { get; private set; }
@@ -20,6 +23,7 @@ namespace SocialMedia.Core.Entities
         public string Email { get; private set; }
         public string Telefone { get; private set; }
         public DateTime DataNascimento { get; private set; }
+        public List<Perfil> Perfis { get; private set; }
 
         public void Update(string? nomeCompleto, DateTime dataNascimento)
         {

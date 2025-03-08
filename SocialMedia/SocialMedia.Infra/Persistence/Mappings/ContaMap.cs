@@ -31,6 +31,10 @@ namespace SocialMedia.Infra.Persistence.Mappings
             builder.Property(c => c.DataNascimento)
                 .IsRequired();
 
+            builder.HasMany(c => c.Perfis)
+                .WithOne(p => p.Conta)
+                .HasForeignKey(p => p.IdConta)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasIndex(c => c.Email)
                 .HasDatabaseName("IX_Conta_Email");

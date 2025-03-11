@@ -17,13 +17,20 @@ namespace SocialMedia.App.Services.Contas
 
         public ResultViewModel<int> Insert(CreateContaInputModel model)
         {
-            var conta = new Conta(
+            var conta = _contaRepository.GetByEmail(model.Email);
+
+            if (conta != null)
+            {
+                return ResultViewModel<int>.Error(ContaMsgs.GetContaExist());
+            }
+
+            conta = new Conta(
                 model.NomeCompleto,
                 model.Senha,
                 model.Email,
                 model.Telefone,
                 model.DataNascimento
-                );
+            );
 
             var contaId =  _contaRepository.Insert(conta);
 

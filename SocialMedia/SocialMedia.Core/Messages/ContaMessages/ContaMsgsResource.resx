@@ -156,4 +156,7 @@
   <data name="ContaSenhaInvalid" xml:space="preserve">
     <value>Senha inválida.</value>
   </data>
+  <data name="ContaExist" xml:space="preserve">
+    <value>Conta já existe.</value>
+  </data>
 </root>

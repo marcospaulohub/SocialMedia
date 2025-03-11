@@ -8,6 +8,10 @@
         {
             return BaseMsgs.GetResource("ContaNotExist", fileNameResx);
         }
+        public static string GetContaExist()
+        {
+            return BaseMsgs.GetResource("ContaExist", fileNameResx);
+        }
 
         public static string GetNomeCompletoNotEmpty()
         {

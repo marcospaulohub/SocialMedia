@@ -38,6 +38,31 @@ namespace SocialMedia.Tests.App
         }
 
         [Fact]
+        public void Insert_ContaIsDuplicate_Error()
+        {
+            // Arrange
+            var conta = FakeDataHelper.CreateFakerConta();
+            var createContaInputModel = FakeDataHelper.CreateContaInputModelFaker();
+            createContaInputModel.Email = conta.Email;
+
+            var repository = Substitute.For<IContaRepository>();
+
+            repository
+                .GetByEmail(conta.Email)
+                .Returns(conta);
+
+            var service = new ContaService(repository);
+
+            // Act
+            var result = service.Insert(createContaInputModel);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+            Assert.Equal(0, result.Data);
+            Assert.Equal(result.Message, ContaMsgs.GetContaExist());
+        }
+
+        [Fact]
         public void Update_ContaIsOk_Success()
         {
             // Arrange

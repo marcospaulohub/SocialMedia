@@ -27,6 +27,7 @@ namespace SocialMedia.Tests.Core
             Assert.Equal(telefone, conta.Telefone);
             Assert.Equal(dataNascimento, conta.DataNascimento);
             Assert.True(DateTime.Now.Date == conta.CreatedAt.Date);
+            Assert.True(conta.Perfis.Count == 0);
         }
 
         [Fact]

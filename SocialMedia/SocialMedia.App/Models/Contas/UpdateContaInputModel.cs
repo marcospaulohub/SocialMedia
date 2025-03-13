@@ -4,7 +4,6 @@ namespace SocialMedia.App.Models.Contas
 {
     public class UpdateContaInputModel
     {
-        public UpdateContaInputModel() { }
         public UpdateContaInputModel(string? nomeCompleto, DateTime dataNascimento)
         {
             NomeCompleto = nomeCompleto;

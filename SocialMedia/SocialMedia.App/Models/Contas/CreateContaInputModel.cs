@@ -4,7 +4,6 @@ namespace SocialMedia.App.Models.Contas
 {
     public class CreateContaInputModel
     {
-        public CreateContaInputModel() { }
         public CreateContaInputModel(string nomeCompleto, string senha, string email, string telefone, DateTime dataNascimento)
         {
             NomeCompleto = nomeCompleto;

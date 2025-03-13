@@ -3,26 +3,14 @@ using System.Collections.Generic;
 
 namespace SocialMedia.Core.Entities
 {
-    public class Conta : BaseEntity
+    public class Conta(string nomeCompleto, string senha, string email, string telefone, DateTime dataNascimento) : BaseEntity()
     {
-        public Conta(string nomeCompleto, string senha, string email, string telefone, DateTime dataNascimento)
-            : base()
-        {
-            NomeCompleto = nomeCompleto;
-            Senha = senha;
-            Email = email;
-            Telefone = telefone;
-            DataNascimento = dataNascimento;
-
-            Perfis = [];
-        }
-
-        public string NomeCompleto { get; private set; }
-        public string Senha { get; private set; }
-        public string Email { get; private set; }
-        public string Telefone { get; private set; }
-        public DateTime DataNascimento { get; private set; }
-        public List<Perfil> Perfis { get; private set; }
+        public string NomeCompleto { get; private set; } = nomeCompleto;
+        public string Senha { get; private set; } = senha;
+        public string Email { get; private set; } = email;
+        public string Telefone { get; private set; } = telefone;
+        public DateTime DataNascimento { get; private set; } = dataNascimento;
+        public List<Perfil> Perfis { get; private set; } = [];
 
         public void Update(string? nomeCompleto, DateTime dataNascimento)
         {
